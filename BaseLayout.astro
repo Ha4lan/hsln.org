@@ -1,0 +1,17 @@
+---
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title || 'Default Title'}</title>
+    <meta name="description" content={description || 'Default description'}>
+    <!-- 他の共通のheadタグをここに追加 -->
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
